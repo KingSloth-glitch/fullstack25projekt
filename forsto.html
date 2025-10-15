@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Drop-Down Meny utan JavaScript</title>
+
+  <style>
+    /* === Grundinställningar === */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+    }
+
+    /* === Navigationsfält === */
+    nav {
+      background-color: #333;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    nav li {
+      position: relative;
+    }
+
+    nav a {
+      display: block;
+      padding: 14px 20px;
+      color: white;
+      text-decoration: none;
+      transition: background 0.3s;
+    }
+
+    nav a:hover {
+      background-color: #444;
+    }
+
+    /* === Drop-down-innehåll === */
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #444;
+      min-width: 180px;
+      flex-direction: column;
+      z-index: 1;
+    }
+
+    .dropdown-content a {
+      padding: 10px 16px;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #555;
+    }
+
+    /* === Visa undermenyn när föräldern är i fokus (mobilvänligt) eller hover (desktop) === */
+    li:focus-within .dropdown-content,
+    li:hover .dropdown-content {
+      display: flex;
+    }
+
+    /* === Mobilanpassning === */
+    @media (max-width: 600px) {
+      nav ul {
+        flex-direction: column;
+      }
+
+      nav li {
+        width: 100%;
+      }
+
+      .dropdown-content {
+        position: static;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <nav>
+    <ul>
+      <li><a href="#">Hem</a></li>
+
+      <!-- Drop-down utan JavaScript -->
+      <li tabindex="0">
+        <a href="#">Tjänster ▾</a>
+        <div class="dropdown-content">
+          <a href="#">Webbutveckling</a>
+          <a href="#">Design</a>
+          <a href="#">SEO</a>
+        </div>
+      </li>
+
+      <li><a href="#">Om oss</a></li>
+      <li><a href="#">Kontakt</a></li>
+    </ul>
+  </nav>
+</body>
+</html>
