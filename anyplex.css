@@ -1,0 +1,187 @@
+button{
+    background-color:green;
+    color:white;
+    border:none;
+    padding:10px 20px;
+    font-size:16px;
+    cursor:pointer;
+    border-radius:8px;
+    transition: all 0.3s ease;
+}
+
+button:hover{
+    background-color:darkgreen;
+}
+
+button:active{
+    color:red;
+}
+
+button:focus{
+    outline:3px solid orange;
+    outline-offset:2px;
+}
+
+.dekoration{
+    font-size:20px;
+    color:#333;
+    text-align:center;
+    position:relative;
+    margin:50px auto;
+    width:60%;
+}
+
+.dekoration::before{
+    content:"🌿";
+    margin-right:10px;
+    font-size:24px;
+    vertical-align:middle;
+}
+
+.dekoration::after{
+    content:"";
+    display:block;
+    width:80px;
+    height:3px;
+    background-color:green;
+    margin:10px auto 0;
+    border-radius:2px;
+}
+
+.intro{
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size:18px;
+    color:#333;
+    width:60%;
+    margin:50px auto;
+    line-height:1.6;
+    text-align:justify;
+}
+
+.intro::first-letter{
+    font-size:48px;
+    color:green;
+    font-weight:bold;
+    float:left;
+    margin-right:8px;
+    line-height:1;
+}
+
+.intro::first-line{
+    color:darkgreen;
+    font-style:italic;
+    letter-spacing:1px;
+}
+
+input[type="text"]{
+    width:250px;
+    padding:10px;
+    border:2px solid grey;
+    border-radius:6px;
+    font-size:16px;
+    transition:all 0.3s ease;
+}
+
+input[type="text"]:focus{
+    border-color:green;
+    background-color:lightgreen;
+    outline:none;
+    box-shadow:0 0 8px rgba(76, 175, 80, 0.5);
+}
+
+.pulse-btn{
+     background-color:green;
+    color:white;
+    border:none;
+    padding:10px 20px;
+    font-size:16px;
+    cursor:pointer;
+    border-radius:8px;
+    transition: all 0.3s ease;
+
+    animation-name: pulse;
+animation-duration: 2s;
+animation-iteration-count: infinite;
+}
+
+.pulse-btn:hover{
+    background-color:darkgreen;
+}
+
+@keyframes pulse{
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f3f3f3;
+}
+
+.slideshow-container {
+    position:relative;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    width:120px;
+}
+
+.dot {
+    width:20px;
+    height:20px;
+    background-color:lightgrey;
+    border-radius:50%;
+}
+
+.active-dot {
+    position:absolute;
+    top:0;
+    left:0;
+    width:20px;
+    height:20px;
+    background-color:green;
+    border-radius:50%;
+    animation-name: move-dot;
+    animation-duration:6s;
+    animation-iteration-count: 3;
+    animation-timing-function:ease-in-out;
+}
+
+@keyframes move-dot {
+    0% { left : 0;}
+    50% { left:50px;}
+    100% { left:100px;}
+}
+
+.pulse-title {
+  font-size: 3rem;
+  font-family: 'Arial', sans-serif;
+  color: #2c3e50;
+  text-align: center;
+  animation-name: pulse-title;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes pulse-title {
+  0% {
+    transform: scale(1);         /* Ursprunglig storlek */
+  }
+  50% {
+    transform: scale(1.1);       /* Väx till 110% av storleken */
+  }
+  100% {
+    transform: scale(1);         /* Tillbaka till normal storlek */
+  }
+}

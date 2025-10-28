@@ -7,7 +7,14 @@ nav{
     background-color:black;
     display:flex;
     align-items:center;
+    flex-wrap:wrap;
     justify-content: space-around;
+}
+
+nav img{
+    width:60px;
+    height:auto;
+    margin-bottom:5px;
 }
 
 nav a{
@@ -53,6 +60,10 @@ nav a:hover{
     display:block;
 }
 
+body{
+    h1{text-align:center;}
+}
+
 .calm{
     height:100vh;
     width:100%;
@@ -69,4 +80,71 @@ nav a:hover{
     text-align:center;
     color:white;
     padding:0 1rem;
+}
+
+.meny-meny{
+    background-color:black;
+    color:gold;
+    font-family:playfair display,serif;
+}
+
+.meny-section{
+    padding:2px;
+    display:flex;
+    align-items:center;
+    flex-direction:column;
+    
+}
+ul{
+    list-style-position:outside;
+    padding-left:40px;
+    background-color:red;
+}
+ul li{
+    line-height:2.0;
+}
+
+.kontakt-form{
+    display:flex;
+    flex-direction:column;
+    width:300px;
+    
+    background-color:green;
+    padding:20px;
+    border-radius:12px;
+}
+.kontakt-form label{
+    margin-top:10px;
+    font-weight:bold;
+}
+
+.kontakt-form input, .kontakt-form textarea{
+    margin-top:5px;
+    padding:8px;
+    border:1px solid black;
+    border-radius:6px;
+    font-size:16px;
+}
+
+.kontakt-form input:focus, .kontakt-form textarea:focus{
+    border-color:lightbrown;
+    outline:none;
+    background-color:lightgreen;
+    transition:0.3s;
+}
+
+.kontakt form button{
+    margin-top:15px;
+    padding:10px;
+    background-color:brown;
+    color:white;
+    border:none;
+    border-radius:6px;
+    cursor:pointer;
+    font-size:16px;
+    transition:background-color 0.3s ease;
+}
+
+.kontakt-form button:hover{
+    background-color:rgb(94, 9, 9);
 }

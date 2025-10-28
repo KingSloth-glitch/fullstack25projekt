@@ -1,0 +1,67 @@
+:root {
+  --bg-color: white;
+  --text-color: black;
+}
+
+/* 🌍 Grundläggande stilar */
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: Arial, sans-serif;
+  text-align: center;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.5s, color 0.5s; /* Mjuk övergång vid tema-byte */
+}
+
+/* 🔘 Stil för knappen */
+button {
+  background-color: var(--text-color);
+  color: var(--bg-color);
+  border: 2px solid var(--text-color);
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  transform: scale(1.05);
+  background-color: transparent;
+  color: var(--text-color);
+}
+
+.transition-btn {
+  background-color: #4CAF50; /* Grön grundfärg */
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+
+  /* 🪄 Här är övergången! */
+  transition: background-color 0.5s ease, transform 0.3s ease;
+}
+
+/* Hover-effekt med mjuk övergång */
+.transition-btn:hover {
+  background-color: #45a049; /* Lite mörkare grön */
+  transform: scale(1.05); /* Liten förstoring vid hover */
+}
+
+/* Bilden före hover */
+.transform-img {
+  width: 300px;
+  border-radius: 10px;
+  transition: transform 0.6s ease; /* Gör förändringen mjuk */
+}
+
+/* När muspekaren är över bilden */
+.transform-img:hover {
+  transform: rotate(10deg) scale(1.1); /* Roterar 10° och förstorar 10% */
+}

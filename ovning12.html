@@ -1,0 +1,38 @@
+HTML:
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+<meta charset="UTF-8">
+<title>Temaväxlare</title>
+<link rel="stylesheet" href="styleler.css">
+</head>
+<body>
+<button id="themeButton">Byt Tema</button>
+<script src="script.js"></script>
+<button class="transition-btn">Hovra över mig!</button>
+ <div class="container">
+    <img src="https://placekitten.com/300/200" alt="Söt katt" class="transform-img">
+    </div>
+     <!-- Canvas-elementet där vi ritar -->
+  <canvas id="myCanvas" width="400" height="300" style="border:1px solid #000000;">
+    Din webbläsare stöder inte canvas-elementet.
+  </canvas>
+
+  <script>
+    // Hämta canvas-elementet
+    const canvas = document.getElementById("myCanvas");
+    const ctx = canvas.getContext("2d"); // 2D-ritläge
+
+    // Ställ in färg för fyllning
+    ctx.fillStyle = "blue";
+
+    // Rita en fylld rektangel (x, y, bredd, höjd)
+    ctx.fillRect(100, 75, 200, 150);
+
+    // Rita en rektangels ram
+    ctx.strokeStyle = "black";
+    ctx.lineWidth = 3;
+    ctx.strokeRect(100, 75, 200, 150);
+  </script>
+</body>
+</html>

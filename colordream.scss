@@ -1,0 +1,60 @@
+$primary-color:purple;
+$secondary-color:blue;
+$background-color:black;
+
+$font-main: 'Playfair Display', serif;
+$font-secondary: 'Arial', sans-serif;
+
+body{
+    font-family: $font-main;
+    background-color:$background-color;
+    color:#333;
+    margin:0px;
+    padding:0px;
+}
+
+header {
+  background-color: $primary-color;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+// 📑 Rubriker
+h1, h2, h3 {
+  font-family: $font-secondary;
+  color: $primary-color;
+}
+
+// 🔘 Knappar
+button {
+  background-color: $secondary-color;
+  color: #222;
+  font-family: $font-main;
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: darken($secondary-color, 10%);
+  }
+}
+
+nav {
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    li {
+      display: inline-block;
+
+      a {
+        display: block;
+        padding: 6px 12px;
+        text-decoration: none;
+      }
+    }
+  }
+}
