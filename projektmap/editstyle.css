@@ -60,6 +60,24 @@ nav a:hover{
 
 body{
     h1{text-align:center;}
+    background-color:beige;
+}
+
+.texter{
+    display:flex;
+    justify-content:center;
+}
+
+.caterer{
+    background-color:gray;
+    color:black;
+    padding:10px 15px;
+    border-radius:6px;
+    text-decoration:none;
+    border:black 1px solid;
+    width:80%;
+    text-align:center;
+    transition:background-color 0.3s ease;
 }
 
 .calm{
@@ -105,6 +123,10 @@ body{
     background-color:lightgreen;
 }
 
+.set{
+    text-align:center;
+}
+
 .meny-meny{
     background-color:black;
     color:gold;
@@ -120,7 +142,7 @@ body{
     flex-direction:column;
     
 }
-ul{
+.menue{
     list-style-position:outside;
     padding-left:40px;
     margin:10px 0;
@@ -129,37 +151,46 @@ ul{
     width:90%;
     border-radius:10px;
 }
-ul li{
+.menue li{
     line-height:1.8;
     padding:5px 0;
     border-bottom:1px solid white;
 }
-ul li:last-child{
+.menue li:last-child{
     border-bottom:none;
 }
 
 .container{
     display:flex;
     flex-direction:column;
-    justify-content:flex-start;
-    align-items:stretch;
+    align-items:center;
+    text-align:center;
     width:100%;
-    gap:20px;
-    padding:0 1rem;
-    margin-bottom:20px;
+    max-width:900px;
+    margin:30px auto;
+    padding:20px;
+    background-color:beige;
+    border-radius:15px;
+    box-shadow:0 4px 12px rgba(0,0,0,0.1);
+    color:black;
 }
 
 .left, .right{
-    width:100%;
-    padding:10px;
+    flex:1;
+    padding:15px;
+}
+
+.left h3, .right h3{
+    color:black;
+    margin-bottom:10px;
 }
 
 .divide{
-  width: 100%;
+  width: 70%;
   height: 2px;
   background-color: black;
-  align-self: center;
-  margin:0;
+  margin:20px 0;
+  border-radius:2px;
 }
 
 .kontakt-form {
@@ -212,9 +243,33 @@ ul li:last-child{
   background-color: rgb(94, 9, 9);
 }
 
-.kontakta-oss{
-    text-align:end;
-    background-color:lightblue;
+footer{
+    background-color:darkred;
+    color:white;
+    padding:20px;
+    text-align:center;
+}
+
+.footerlife{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:15px;
+}
+
+.kontakt ul{
+    list-style:none;
+    padding:0;
+    margin:0;
+}
+
+.kontakt a{
+    color:lightgreen;
+    text-decoration:none;
+}
+
+.kontakt a:hover{
+    text-decoration:underline;
 }
 
 .taku{
@@ -281,19 +336,21 @@ ul li:last-child{
     padding: 20px;
   }
 
-  ul {
+  .menue {
     width: 80%;
     padding-left: 40px;
   }
 
-  ul li {
+  .menue li {
     line-height: 2.0;
     font-size: 1.1rem;
   }
 
   .container{
     flex-direction:row;
+    justify-content:space-between;
     align-items:stretch;
+    text-align:left;
     gap:0;
   }
 
@@ -302,7 +359,7 @@ ul li:last-child{
     height:auto;
     background-color:black;
     align-self:stretch;
-    margin:0 10px;
+    margin:0 20px;
   }
 
   .left, .right{
@@ -328,6 +385,13 @@ ul li:last-child{
 
   .kontakt-form button {
     font-size: 18px;
+  }
+
+  .footerlife{
+    flex-direction:row;
+    justify-content:space-around;
+    align-items:flex-start;
+    text-align:left;
   }
 }
 
@@ -379,21 +443,29 @@ ul li:last-child{
     text-align: center;
   }
 
-  ul {
+  .menue {
     width: 40%;
     margin: 20px;
     background-color: #111;
     padding: 20px;
   }
 
-  ul li {
+  .menue li {
     font-size: 1.1rem;
     line-height: 2.2;
   }
 
   .container{
-    padding:0 3rem;
+    padding:40px;
     gap:0;
+  }
+
+  .left, .right7{
+    padding:30px;
+  }
+
+  .divide{
+    margin:0 40px;
   }
 
   
@@ -407,6 +479,14 @@ ul li:last-child{
     max-width: 400px;
     font-size: 1.1rem;
     line-height: 1.6;
+  }
+
+  footer{
+    padding:40px 60px;
+  }
+
+  .kontakt a{
+    font-size:1.1rem;
   }
 }
 

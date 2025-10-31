@@ -28,27 +28,29 @@
         </header>
         <main>
             <h1>Catering för alla tillfällen</h1>
+            <div class="texter">
             <p>Vi på Café Sloth erbjuder catering för alla typer av evenemang, från företagsluncher till bröllop.
                Våran meny erbjuder ett varierat utbud som kan anpassas efter dina önskemål och behov.
                Vi servererar efter dina specifikationer och ser till att allt kommer vid tiden du bestämt.
                Kontakta oss gärna för att diskutera dina cateringbehov och få en offert.
             </p>
-            <a href="meny.html">Våran catering meny!</a>
+            </div>
+            <a href="meny.html" class="caterer">Våran catering meny!</a>
             <h2>Boka catering idag!</h2>
-            <form action="boka.html" method="post">
+             <form class="kontakt-form">
                 <label for="name">Förnamn*:</label>
                 <input type="text" id="name" name="name" required>
 
-                <label for="surname">Efternamn*:</label>
-                <input type="text" id="surname" name="surname" required>
+                <label for="name">Efternamn*:</label>
+                <input type="text" id="lastname" name="lastname" required>
 
                 <label for="email">E-post*:</label>
                 <input type="email" id="email" name="email" required>
 
                 <label for="message">Meddelande:</label>
-                <textarea id="message" name="message"></textarea>
+                <textarea id="message" name="message" rows="4" cols="50"></textarea>
 
-                <input type="submit" value="Boka">
+                <button type="submit">Skicka</button>
             </form>
             <p>beställ catering senast 48timmar innan leverans.
                 vänligen notera oss om allergier eller specialkost.
@@ -59,7 +61,22 @@
             </p>
         </main>
         <footer>
-            <p>&copy; 2023 Café Sloth. All rights reserved.</p>
+          <div class="footerlife">
+            <div class="kontakt">
+              <h2>Kontakta oss!</h2>
+                <ul>
+                    <li><a href="tel:0123456789">📞 Telefon: 012-345 67 89</a></li>
+                    <li><a href="mailto:historicalkingsloth@gmail.com">✉️ E-post: historicalkingsloth@gmail.com</a></li>
+                    <li><a href="https://www.instagram.com/historicalkingsloth/">📸 Instagram: @historicalkingsloth</a></li>
+                    <li><a href="https://www.facebook.com/historicalkingsloth">📘 Facebook: Café Sloth</a></li>
+                </ul>
+            </div>
+            <div class="adress">
+             <h3>Adress:</h3>
+                <p>Slothgatan 1,<br> 123 45 Slothstad</p>
+            </div>
+          </div>
+            <p class="copyright">&copy; 2023 Café Sloth. All rights reserved.</p>
         </footer>
     </body>
 </html>
