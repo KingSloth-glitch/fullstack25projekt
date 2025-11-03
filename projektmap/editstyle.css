@@ -1,5 +1,5 @@
 header{
-    background: color #a67658;
+    background-color: #a67658;
     padding: 10px 20px; 
 }
 
@@ -59,8 +59,15 @@ nav a:hover{
 }
 
 body{
-    h1{text-align:center;}
     background-color:beige;
+}
+
+body h1{
+    text-align:center;
+}
+
+.place{
+    text-align:center;
 }
 
 .texter{
@@ -69,7 +76,7 @@ body{
 }
 
 .caterer{
-    background-color:gray;
+    background-color:purple;
     color:black;
     padding:10px 15px;
     border-radius:6px;
@@ -78,6 +85,10 @@ body{
     width:80%;
     text-align:center;
     transition:background-color 0.3s ease;
+}
+
+.caterer:hover{
+    background-color:green;
 }
 
 .calm{
@@ -109,7 +120,7 @@ body{
 
 .under-meny a{
     background-color:transparent;
-    color:red;
+    color:crimson;
     padding:10px 15px;
     border-radius:6px;
     text-decoration:none;
@@ -140,6 +151,9 @@ body{
     display:flex;
     align-items:center;
     flex-direction:column;
+    color:gold;
+    font-family:playfair display,serif;
+    background-color:black;
     
 }
 .menue{
@@ -230,7 +244,7 @@ body{
 .kontakt-form button {
   margin-top: 15px;
   padding: 10px;
-  background-color: brown;
+  background-color: rgb(225, 131, 131);
   color: white;
   border: none;
   border-radius: 6px;
@@ -240,7 +254,7 @@ body{
 }
 
 .kontakt-form button:hover {
-  background-color: rgb(94, 9, 9);
+  background-color: darkred;
 }
 
 footer{
@@ -286,7 +300,7 @@ footer{
 }
 
 .taker a{
-    background-color:blue;
+    background-color:darkgreen;
     color:white;
     padding:10px 15px;
     border-radius:6px;
@@ -460,7 +474,7 @@ footer{
     gap:0;
   }
 
-  .left, .right7{
+  .left, .right{
     padding:30px;
   }
 
