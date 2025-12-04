@@ -9,3 +9,4 @@ function ispalindrome(text) {
         return "false";
     }
     }
+    console.log(ispalindrome("level"));
