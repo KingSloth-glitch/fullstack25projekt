@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Biblio</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="bibliotek med javascript">
+        <meta name="author" content="Pontus Olsson">
+        <link rel="stylesheet" href="mini-art.css">
+    </head>
+    <body>
+        <header>
+            <h1>Mini Biblio</h1>
+            <nav>
+            <a href="om-biblio.html">Om Biblio</a>
+            <a href="biblio-center.html">Kontakta Biblio</a>
+            </nav>
+        </header>
+        <form class="kontakt-form" aria-label="kontaktformulär">
+                <label for="name">Förnamn*:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="lastname">Efternamn*:</label>
+                <input type="text" id="lastname" name="lastname" required>
+
+                <label for="email">E-post*:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Meddelande</label>
+                <textarea id="message" name="message" rows="4" cols="50"></textarea>
+
+                <button type="submit">Skicka</button>
+            </form>
+
+        <script src="custom-shelf.js"></script>
+    </body>
+</html>
