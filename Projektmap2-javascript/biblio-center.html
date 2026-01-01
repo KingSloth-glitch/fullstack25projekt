@@ -12,24 +12,30 @@
         <header>
             <h1>Mini Biblio</h1>
             <nav>
+            <a href="mini-biblio.html">Hem</a>
             <a href="om-biblio.html">Om Biblio</a>
             <a href="biblio-center.html">Kontakta Biblio</a>
             </nav>
         </header>
-        <form class="kontakt-form" aria-label="kontaktformulär">
+        <form class="kontakt-form" aria-label="kontaktformulär" novalidate>
                 <label for="name">Förnamn*:</label>
                 <input type="text" id="name" name="name" required>
+                <span class="error" id="nameError"></span>
 
                 <label for="lastname">Efternamn*:</label>
                 <input type="text" id="lastname" name="lastname" required>
+                <span class="error" id="lastNameError"></span>
 
                 <label for="email">E-post*:</label>
                 <input type="email" id="email" name="email" required>
+                <span class="error" id="emailError"></span>
 
                 <label for="message">Meddelande</label>
                 <textarea id="message" name="message" rows="4" cols="50"></textarea>
 
                 <button type="submit">Skicka</button>
+
+                <p class="success-message" id="successMessage"></p>
             </form>
 
         <script src="custom-shelf.js"></script>

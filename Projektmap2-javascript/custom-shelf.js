@@ -1,7 +1,9 @@
+// lägga till böcker i en lista samt ta bort böckerna
 const bookInput = document.getElementById('bookInput');
 const addBookButton = document.getElementById('addBook');
 const bookList = document.getElementById('bookList');
 const searchInput = document.getElementById('searchInput');
+
 
 addBookButton.addEventListener("click", function() {
     const bookTitle = bookInput.value.trim();
@@ -27,6 +29,8 @@ addBookButton.addEventListener("click", function() {
     bookInput.value="";
 });
 
+// sökfunktionen
+
 searchInput.addEventListener("input", function() {
     const searchText = searchInput.value.toLowerCase();
     const books = bookList.querySelectorAll("li");
@@ -46,5 +50,49 @@ searchInput.addEventListener("input", function() {
 bookInput.addEventListener("keydown", function(e) {
     if (e.key === "Enter") {
         addBookButton.click();
+    }
+});
+
+// form validation script
+
+const form = document.querySelector(".kontakt-form");
+
+const nameInput = document.getElementById("name");
+const lastNameInput = document.getElementById("lastname");
+const emailInput = document.getElementById("email");
+
+const nameError = document.getElementById("nameError");
+const lastNameError = document.getElementById("lastNameError");
+const emailError = document.getElementById("emailError");
+const successMessage = document.getElementById("successMessage");
+
+form.addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    nameError.textContent = "";
+    lastNameError.textContent = "";
+    emailError.textContent = "";
+    successMessage.textContent = "";
+
+    let isValid = true;
+
+    if (nameInput.value.trim() === "") {
+        nameError.textContent = "Förnamn krävs i fältet.";
+        isValid = false;
+    }
+
+    if (lastNameInput.value.trim() === "") {
+        lastNameError.textContent = "Efternamn krävs i fältet.";
+        isValid = false;
+    }
+
+    if (emailInput.value.trim() === "" || !emailInput.value.includes("@")) {
+        emailError.textContent = "E-post krävs i fältet.";
+        isValid = false;
+    }
+
+    if (isValid) {
+        successMessage.textContent = "Formuläret har skickats!";
+        form.reset ();
     }
 });
