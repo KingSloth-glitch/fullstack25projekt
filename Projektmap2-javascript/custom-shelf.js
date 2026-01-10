@@ -47,6 +47,8 @@ searchInput.addEventListener("input", function() {
     });
 });
 
+// lägg till bok med enter-knappen
+
 bookInput.addEventListener("keydown", function(e) {
     if (e.key === "Enter") {
         addBookButton.click();
