@@ -4,7 +4,7 @@ const addBookButton = document.getElementById('addBook');
 const bookList = document.getElementById('bookList');
 const searchInput = document.getElementById('searchInput');
 
-
+if (addBookButton){
 addBookButton.addEventListener("click", function() {
     const bookTitle = bookInput.value.trim();
 
@@ -27,10 +27,10 @@ addBookButton.addEventListener("click", function() {
     bookList.appendChild(li);
 
     bookInput.value="";
-});
+});}
 
 // sökfunktionen
-
+if (searchInput){
 searchInput.addEventListener("input", function() {
     const searchText = searchInput.value.toLowerCase();
     const books = bookList.querySelectorAll("li");
@@ -45,15 +45,15 @@ searchInput.addEventListener("input", function() {
         }
         
     });
-});
+});}
 
 // lägg till bok med enter-knappen
-
+if (bookInput){
 bookInput.addEventListener("keydown", function(e) {
     if (e.key === "Enter") {
         addBookButton.click();
-    }
-});
+    
+}});}
 
 // form validation script
 
@@ -67,7 +67,7 @@ const nameError = document.getElementById("nameError");
 const lastNameError = document.getElementById("lastNameError");
 const emailError = document.getElementById("emailError");
 const successMessage = document.getElementById("successMessage");
-
+if (form){
 form.addEventListener("submit", function(e) {
     e.preventDefault();
 
@@ -97,4 +97,4 @@ form.addEventListener("submit", function(e) {
         successMessage.textContent = "Formuläret har skickats!";
         form.reset ();
     }
-});
+});}
