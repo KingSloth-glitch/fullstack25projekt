@@ -203,3 +203,11 @@ h2 {
     margin-top: 40px;
     font-family: Arial, sans-serif;
 }
+
+p {
+    max-width: 600px;
+    margin: 20px auto;
+    line-height: 1.6;
+    font-size: 18px;
+    text-align:center;
+}
