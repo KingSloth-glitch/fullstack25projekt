@@ -151,3 +151,55 @@ li {
     font-weight: bold;
     text-align: center;
 }
+
+.slideshow {
+    width: 300px;
+    margin: 40px auto;
+    text-align: center;
+}
+
+.slideshow img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.controls {
+    margin-top: 10px;
+}
+
+button {
+    padding: 8px 14px;
+    margin: 5px;
+    cursor: pointer;
+    border: none;
+    background-color: #333;
+    color: white;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+.indicators {
+    margin-top: 10px;
+}
+
+.dot {
+    height: 12px;
+    width: 12px;
+    background-color: lightgray;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 0 4px;
+}
+
+.dot.active {
+    background-color: black;
+}
+
+h2 {
+    text-align: center;
+    margin-top: 40px;
+    font-family: Arial, sans-serif;
+}

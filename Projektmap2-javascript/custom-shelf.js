@@ -98,3 +98,46 @@ form.addEventListener("submit", function(e) {
         form.reset ();
     }
 });}
+
+// slideshow
+
+const images = ["slot.jpg", "co-founder.jpg"];
+let currentIndex = 0;
+
+const slideshow = document.querySelector(".slideshow");
+const slideImage = document.getElementById("slideImage");
+const prevBtn = document.getElementById("prevBtn");
+const nextBtn = document.getElementById("nextBtn");
+const dots = document.querySelectorAll(".dot");
+
+if (slideshow){
+function updateSlide() {
+    slideImage.src = images[currentIndex];
+
+        dots.forEach(dot => dot.classList.remove("active"));
+        dots[currentIndex].classList.add("active");
+    }
+
+
+
+function nextSlide() {
+    currentIndex++;
+    if (currentIndex >= images.length) {
+        currentIndex = 0;
+    }
+    updateSlide();
+}
+
+function prevSlide() {
+    currentIndex--;
+    if (currentIndex < 0) {
+        currentIndex = images.length - 1;
+    }
+    updateSlide();
+}
+
+nextBtn.addEventListener("click", nextSlide);
+prevBtn.addEventListener("click", prevSlide);
+
+setInterval(nextSlide, 10000);
+}
