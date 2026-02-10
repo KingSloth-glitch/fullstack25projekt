@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery DOM-manipulation</title>
+
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <style>
+        p {
+            padding: 10px;
+            border: 1px solid #ccc;
+            width: 300px;
+            transition: background-color 0.3s;
+        }
+
+        form {
+            max-width: 300px;
+            margin: 30px auto;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 5px;
+        }
+
+        .error {
+            color: red;
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+
+        .success {
+            color: green;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Paragrafer</h1>
+
+    <p>Detta är paragraf 1</p>
+    <p>Detta är paragraf 2</p>
+    <p>Detta är paragraf 3</p>
+
+    <button id="changeTextBtn">Ändra text</button>
+
+    <script src="dagensarbete.js"></script>
+
+    <form id="myForm" novalidate>
+        <label for="username">Användarnamn:</label>
+        <input type="text" id="username">
+        <div class="error" id="usernameError"></div>
+
+        <label for="email">E-post:</label>
+        <input type="text" id="email">
+        <div class="error" id="emailError"></div>
+
+        <button type="submit">Skicka</button>
+
+        <p class="success" id="successMessage"></p>
+    </form>
+</body>
+</html>

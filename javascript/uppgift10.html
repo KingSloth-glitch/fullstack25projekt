@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <title>LocalStorage – Favoritfärg</title>
+    <link rel="stylesheet" href="uppgiftstyle.css">
+    
+</head>
+<body>
+
+    <h1>Välj din favoritfärg</h1>
+
+    <input type="text" id="colorInput" placeholder="Skriv din favoritfärg">
+    <br>
+    <button id="saveColor">Spara färg</button>
+    <button id="removeColor">Ta bort favoritfärg</button>
+
+
+    <p class="color-display" id="colorDisplay"></p>
+
+    <div id="quiz">
+
+  <!-- Sida 1 -->
+  <div class="page" id="page1">
+    <h2>Fråga 1</h2>
+    <p>Vad är JavaScript?</p>
+    <input type="text" id="q1">
+    <button onclick="nextPage(1)">Nästa</button>
+  </div>
+
+  <!-- Sida 2 -->
+  <div class="page" id="page2" style="display:none;">
+    <h2>Fråga 2</h2>
+    <p>Vad används sessionStorage till?</p>
+    <input type="text" id="q2">
+    <button onclick="nextPage(2)">Nästa</button>
+  </div>
+
+  <!-- Sida 3 -->
+  <div class="page" id="page3" style="display:none;">
+    <h2>Sammanfattning</h2>
+    <ul id="summary"></ul>
+    <button onclick="finishQuiz()">Slutför quiz</button>
+  </div>
+
+</div>
+
+    <script src="uppgiften10.js"></script>
+</body>
+</html>
