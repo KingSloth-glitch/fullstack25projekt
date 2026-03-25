@@ -1,19 +1,8 @@
-// ui.js
-
-export function renderPosts(posts, listElement) {
-    listElement.innerHTML = "";
-
-    posts.forEach(post => {
-        const li = document.createElement("li");
-        li.textContent = post.title;
-        listElement.appendChild(li);
-    });
+export function renderaLista(posts) {
+	const ul = document.getElementById('list')
+	ul.innerHTML = posts.map(p => `<li>${p.title}</li>`).join('')
 }
 
-export function showMessage(messageElement, text) {
-    messageElement.textContent = text;
-}
-
-export function clearInput(inputElement) {
-    inputElement.value = "";
+export function visaBekräftelse(id) {
+	document.getElementById('confirmation').textContent = `✅ Skapad med ID: ${id}`
 }

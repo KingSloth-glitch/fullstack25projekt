@@ -1,21 +1,21 @@
 
-import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-       <h1>Hello, World!</h1>
-        <p>
-        jag hoppas lära mig grunderna i React, hur komponenter fungerar 
-        och hur man bygger interaktiva webbaplikationer. 
-        </p>
-        
-          Learn React
-        
-      </header>
-    </div>
-  );
+
+import React from 'react';
+import UserProfile from './username';
+
+class app extends React.Component {
+  render() {
+    return (
+      <div>
+        <UserProfile
+          name = "Jane Doe"
+          email = "jane.doe@example.com"
+          bio = "Software developer passionate about creating intuitive user experiences."
+        />
+      </div>
+    );
+  }
 }
 
-export default App;
+export default app;
