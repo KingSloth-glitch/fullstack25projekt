@@ -1,4 +1,4 @@
-const renderUsers = (users) => {
+const renderUsers = users => {
     const listElement = document.getElementById('user-list')
 
     users.forEach(user => {
