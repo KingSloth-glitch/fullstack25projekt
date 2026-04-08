@@ -2,6 +2,8 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from './assets/vite.svg'
 import heroImg from './assets/hero.png'
+import Counter from '../counting.jsx'
+import Timer from './timer.jsx'
 import './App.css'
 
 function App() {
@@ -114,8 +116,18 @@ function App() {
 
       <div className="ticks"></div>
       <section id="spacer"></section>
+
+      <div>
+        <h1>Counter app</h1>
+        <Counter />
+      </div>
+
+      <div>
+        <h1>Timer app</h1>
+        <Timer />
+      </div>
     </>
-  )
+  );
 }
 
 export default App
