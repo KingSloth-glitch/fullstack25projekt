@@ -19,10 +19,11 @@ function User() {
                 throw new Error('network response was not ok');
             }
              const data = await response.json();
-             const pilots = data.filter(user => user.role === 'pilot');
+             const filterData = data.filter(user => user.role === 'pilot');
 
-             setUsers(pilots);
-        console.log(data);
+             setUsers(filterData);
+
+        console.log(filterData);
             } catch (error) {
             console.error('Error fetching data:', error);
             
@@ -42,9 +43,9 @@ function User() {
             </button>
 
             <ul>
-                {users.map((user, index) => (
-                    <li key={index}>
-                        {user.name} - {user.role}
+                {users.map((user) => (
+                    <li key={user.id}>
+                        <strong>{user.name}</strong> - <strong>{user.role}</strong>
                     </li>
                 ))}
             </ul>
