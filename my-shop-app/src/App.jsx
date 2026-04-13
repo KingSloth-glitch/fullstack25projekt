@@ -4,6 +4,7 @@ import viteLogo from './assets/vite.svg'
 import heroImg from './assets/hero.png'
 import Counter from '../counting.jsx'
 import Timer from './timer.jsx'
+import DynamicTextUpdater from './Textupdate.jsx'
 import './App.css'
 
 function App() {
@@ -126,8 +127,13 @@ function App() {
         <h1>Timer app</h1>
         <Timer />
       </div>
+
+      <div>
+      <DynamicTextUpdater />
+    </div>
     </>
   );
 }
+
 
 export default App
