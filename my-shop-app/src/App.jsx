@@ -5,6 +5,8 @@ import heroImg from './assets/hero.png'
 import Counter from '../counting.jsx'
 import Timer from './timer.jsx'
 import DynamicTextUpdater from './Textupdate.jsx'
+import InteractiveList from './interactiveList.jsx'
+import MultiFieldForm from './MultiFieldForm.jsx'
 import './App.css'
 
 function App() {
@@ -131,6 +133,18 @@ function App() {
       <div>
       <DynamicTextUpdater />
     </div>
+
+    <section>
+    <div>
+      <InteractiveList />
+    </div>
+    </section>
+
+    <section>
+      <div>
+        <MultiFieldForm />
+      </div>
+    </section>
     </>
   );
 }

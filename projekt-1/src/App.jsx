@@ -1,19 +1,19 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import heroImg from './assets/hero.png'
-import User from './user.jsx'
-import './App.css'
+import { useState } from 'react';
+import reactLogo from './assets/react.svg';
+import viteLogo from './assets/vite.svg';
+import heroImg from './assets/hero.png';
+import User from './user.jsx';
+import UserUI from './UserUI.jsx';
+import './App.css';
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
-     <h1>här är app component</h1>
-     <User />
+      <h1>pontus</h1>
+      <UserUI />
+      <User />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
