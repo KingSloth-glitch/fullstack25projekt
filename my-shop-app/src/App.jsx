@@ -1,16 +1,18 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import heroImg from './assets/hero.png'
-import Counter from '../counting.jsx'
-import Timer from './timer.jsx'
-import DynamicTextUpdater from './Textupdate.jsx'
-import InteractiveList from './interactiveList.jsx'
-import MultiFieldForm from './MultiFieldForm.jsx'
-import './App.css'
+import { useState } from 'react';
+import reactLogo from './assets/react.svg';
+import viteLogo from './assets/vite.svg';
+import heroImg from './assets/hero.png';
+import Counter from '../counting.jsx';
+import Timer from './timer.jsx';
+import DynamicTextUpdater from './Textupdate.jsx';
+import InteractiveList from './interactiveList.jsx';
+import MultiFieldForm from './MultiFieldForm.jsx';
+import ToggleButton from './ToggleButton.jsx';
+import FormComponent from './FormComponent.jsx';
+import './App.css';
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState(0);
 
   return (
     <>
@@ -131,23 +133,32 @@ function App() {
       </div>
 
       <div>
-      <DynamicTextUpdater />
-    </div>
-
-    <section>
-    <div>
-      <InteractiveList />
-    </div>
-    </section>
-
-    <section>
-      <div>
-        <MultiFieldForm />
+        <DynamicTextUpdater />
       </div>
-    </section>
+
+      <section>
+        <div>
+          <InteractiveList />
+        </div>
+      </section>
+
+      <section>
+        <div>
+          <MultiFieldForm />
+        </div>
+      </section>
+      <section>
+        <div>
+          <ToggleButton />
+        </div>
+      </section>
+      <section>
+        <div>
+          <FormComponent />
+        </div>
+      </section>
     </>
   );
 }
 
-
-export default App
+export default App;
