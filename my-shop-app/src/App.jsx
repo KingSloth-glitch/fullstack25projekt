@@ -9,6 +9,11 @@ import InteractiveList from './interactiveList.jsx';
 import MultiFieldForm from './MultiFieldForm.jsx';
 import ToggleButton from './ToggleButton.jsx';
 import FormComponent from './FormComponent.jsx';
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import Home from './pages/Home.jsx';
+import About from './pages/About.jsx';
+import CounterIntel from './Counter.jsx';
+import MyForm from './MyForm.jsx';
 import './App.css';
 
 function App() {
@@ -16,6 +21,16 @@ function App() {
 
   return (
     <>
+      <Router>
+        <nav>
+          <Link to="/">Home</Link> | <Link to="/about">About</Link>
+        </nav>
+
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+        </Routes>
+      </Router>
       <section id="center">
         <div className="hero">
           <img src={heroImg} className="base" width="170" height="179" alt="" />
@@ -155,6 +170,18 @@ function App() {
       <section>
         <div>
           <FormComponent />
+        </div>
+      </section>
+      <section>
+        <div>
+          <h1>custom hooks demo</h1>
+          <CounterIntel />
+        </div>
+      </section>
+
+      <section>
+        <div>
+          <MyForm />
         </div>
       </section>
     </>
