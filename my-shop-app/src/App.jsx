@@ -14,10 +14,16 @@ import Home from './pages/Home.jsx';
 import About from './pages/About.jsx';
 import CounterIntel from './Counter.jsx';
 import MyForm from './MyForm.jsx';
+import { useContext } from 'react';
+import { ThemeProvider } from './components/ThemeProvider.jsx';
+import { ThemeContext } from './components/ThemeContext.jsx';
+import ThemeSwitcher from './components/ThemeSwitcher.jsx';
+import SomeonesProfile from './components/SomeonesProfile.jsx';
 import './App.css';
 
 function App() {
   const [count, setCount] = useState(0);
+  const { theme } = useContext(ThemeContext);
 
   return (
     <>
@@ -31,6 +37,9 @@ function App() {
           <Route path="/about" element={<About />} />
         </Routes>
       </Router>
+      <div className={theme}>
+        <ThemeSwitcher />
+      </div>
       <section id="center">
         <div className="hero">
           <img src={heroImg} className="base" width="170" height="179" alt="" />
@@ -182,6 +191,13 @@ function App() {
       <section>
         <div>
           <MyForm />
+        </div>
+      </section>
+
+      <section>
+        <div>
+          <h1>prop types demo</h1>
+          <SomeonesProfile name="Pontus" age={30} isMember={true} />
         </div>
       </section>
     </>
